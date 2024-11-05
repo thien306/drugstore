@@ -1,0 +1,111 @@
+/* Cấu hình cho sidebar */
+.sidebar {
+    width: 260px; /* Đặt chiều rộng sidebar là 260px */
+    height: 100vh; /* Chiều cao chiếm toàn bộ màn hình */
+    background-color: #e5fbfb; /* Màu nền cho sidebar */
+    color: #444444; /* Màu chữ mặc định trong sidebar */
+    padding: 20px; /* Khoảng cách giữa nội dung và viền sidebar */
+    position: fixed; /* Sidebar cố định khi cuộn trang */
+    top: 0; /* Cố định ở đầu trang */
+    left: 0; /* Cố định bên trái màn hình */
+    z-index: 10; /* Đảm bảo sidebar nằm phía trên các phần tử khác */
+  }
+  
+  /* Tiêu đề sidebar */
+  .sidebar h2 {
+    color: #444444; /* Màu chữ tiêu đề */
+    margin-bottom: 40px; /* Khoảng cách dưới tiêu đề */
+    font-size: 1.9rem; /* Kích thước chữ tiêu đề */
+    font-weight: bold; /* Chữ in đậm */
+    text-align: center; /* Canh giữa tiêu đề */
+  }
+  
+  /* Xóa dấu chấm đầu dòng cho danh sách */
+  .sidebar ul {
+    list-style: none; /* Xóa ký hiệu đầu dòng */
+    padding: 0; /* Xóa khoảng cách trong danh sách */
+  }
+  
+  /* Cấu hình cho từng mục trong danh sách */
+  .sidebar ul li {
+    margin-bottom: 0px; /* Khoảng cách giữa các mục */
+    position: relative; /* Để các phần tử con có thể sử dụng position: absolute */
+  }
+  
+  /* Cấu hình cho các liên kết trong sidebar */
+  .sidebar ul li a {
+    text-decoration: none; /* Xóa gạch chân */
+    color: #444444; /* Màu chữ cho liên kết */
+    font-size: 1.1rem; /* Kích thước chữ */
+    display: flex; /* Hiển thị icon và văn bản theo hàng ngang */
+    align-items: center; /* Canh giữa icon và văn bản theo trục dọc */
+    padding: 15px 5px; /* Tạo khoảng cách bên trong liên kết */
+    border-radius: 4px; /* Bo góc liên kết */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền khi hover */
+  }
+  
+  .sidebar ul li a svg {
+    margin-right: 8px; /* Tăng khoảng cách giữa icon và chữ */
+  }
+  
+  /* Hiệu ứng khi hover vào liên kết */
+  .sidebar ul li a:hover {
+    background-color: #FF6699; /* Đổi màu nền khi hover */
+    color: white; /* Đổi màu chữ khi hover */
+  }
+  
+  /* Cấu hình cho submenu */
+  .submenu {
+    position: absolute; /* Đặt submenu dựa trên phần tử cha (li) */
+    top: 0; /* Vị trí từ trên xuống là 0 */
+    left: 220px; /* Đẩy submenu sang phải để không chồng lên sidebar */
+    background-color: #fff; /* Màu nền submenu */
+    color: #444444; /* Màu chữ submenu */
+    width: auto; /* Chiều rộng submenu */
+    padding: 10px 15px; /* Giảm padding để các mục sát nhau hơn */
+    border-radius: 8px; /* Bo góc submenu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng cho submenu */
+    z-index: 15; /* Đảm bảo submenu nằm trên sidebar */
+    display: flex; /* Hiển thị nội dung submenu theo cột */
+    gap: 20px; /* Khoảng cách giữa các cột trong submenu */
+  }
+  
+  /* Cấu hình cho từng phần của submenu */
+  .submenu-section {
+    flex: 1;
+    margin: 0; /* Xóa margin mặc định nếu có */
+  }
+  /* Tiêu đề cho từng phần của submenu */
+  .submenu h3 {
+    font-size: 1rem; /* Kích thước chữ tiêu đề submenu */
+    font-weight: bold; /* Chữ in đậm */
+    margin-bottom: 1px; /* Khoảng cách dưới tiêu đề */
+    color: #333; /* Màu chữ tiêu đề submenu */
+    display: ruby-text;
+  
+  }
+  
+  /* Xóa dấu chấm đầu dòng và khoảng cách mặc định trong danh sách của submenu */
+  .submenu ul {
+    list-style: none; /* Xóa ký hiệu đầu dòng */
+    padding: 0; /* Xóa khoảng cách bên trong danh sách */
+    margin: 0; /* Xóa khoảng cách bên ngoài danh sách */
+    margin-top: 10px;
+  
+  }
+  
+  /* Cấu hình cho các liên kết trong submenu */
+  .submenu ul li a {
+    color: #444444; /* Màu chữ cho liên kết */
+    font-size: 1rem; /* Kích thước chữ */
+    padding: 5px 0; /* Khoảng cách trên và dưới cho mỗi mục */
+    display: block; /* Đặt mỗi mục chiếm toàn bộ chiều ngang */
+    display: ruby-text;
+  
+  }
+  
+  /* Hiệu ứng khi hover vào liên kết trong submenu */
+  .submenu ul li a:hover {
+    color: #007bff; /* Đổi màu chữ khi hover */
+  }
+  

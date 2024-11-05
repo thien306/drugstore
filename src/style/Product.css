@@ -1,0 +1,328 @@
+.table-product {
+  margin-left: 39px;
+  padding: 20px;
+  width: calc(100% - 0px);
+  background-color: #eeeeee;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 60px;
+}
+/* Định dạng tiêu đề bảng */
+.table-product h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+/* Bảng sản phẩm */
+.table-product table {
+  width: 100%; /* Bảng chiếm toàn bộ độ rộng */
+  border-collapse: collapse; /* Loại bỏ khoảng trống giữa các ô */
+  margin-bottom: 20px; /* Khoảng cách dưới bảng */
+}
+
+/* Định dạng các ô trong bảng */
+.table-product th,
+.table-product td {
+  padding: 15px 5px;
+  text-align: center;
+  border: 1px solid #ddd; /* Đường viền cho các ô */
+}
+
+/* Định dạng hàng tiêu đề */
+.table-product th {
+  background-color: #f8f9fa; /* Màu nền cho hàng tiêu đề */
+  color: #343a40;
+  font-weight: bold;
+}
+
+/* Định dạng các hàng dữ liệu */
+.table-product tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Màu nền cho các hàng chẵn */
+}
+
+/* Định dạng nút "Xem thêm" */
+.text-center {
+  text-align: center;
+}
+
+.text-center .btn-success {
+  padding: 0px 702px;
+  font-size: 1rem;
+}
+
+/* Định dạng khi di chuột vào hàng */
+.table-product tbody tr:hover {
+  background-color: #e9ecef; /* Màu khi hover vào hàng */
+}
+
+/* Điều chỉnh cho thiết bị di động */
+@media (max-width: 768px) {
+  .table-product {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Container của tooltip */
+
+.description {
+  white-space: nowrap; /* Không cho xuống dòng */
+  overflow: hidden; /* Ẩn phần văn bản vượt quá kích thước */
+  text-overflow: ellipsis; /* Hiển thị dấu chấm lửng nếu văn bản quá dài */
+  max-width: 250px; /* Giới hạn chiều rộng của ô, tùy chỉnh theo ý muốn */
+  display: inline-block; /* Giúp áp dụng max-width */
+  vertical-align: top;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Nội dung của tooltip */
+.tooltip-content {
+  visibility: hidden;
+  width: 620px; /* Chiều rộng của tooltip */
+  background-color: #828282;
+  color: #ffffff; /* Màu chữ */
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 50%; /* Hiển thị ở giữa chiều cao của phần tử */
+  left: 100%; /* Hiển thị bên phải phần tử */
+  margin-left: 10px; /* Khoảng cách giữa tooltip và phần tử */
+  transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+  opacity: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Bóng mờ nhẹ */
+}
+
+/* Mũi tên nhỏ trên tooltip */
+.tooltip-content::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* Đặt mũi tên ở giữa chiều cao tooltip */
+  left: -5px; /* Đặt mũi tên ở bên trái tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(0, 0, 0, 0.75) transparent transparent; /* Màu mũi tên */
+}
+
+/* Hiển thị tooltip khi hover */
+.tooltip-container:hover .tooltip-content {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-50%) translateX(10px); /* Di chuyển tooltip sang phải khi hiển thị */
+}
+
+.size-cell span,
+.color-cell span {
+  display: inline-block;
+  margin-right: 5px; /* Khoảng cách giữa các giá trị */
+}
+
+.size-cell,
+.color-cell {
+  padding: 5px; /* Thêm khoảng cách trong ô */
+}
+
+/* Căn chỉnh toàn bộ phần thêm sản phẩm và tìm kiếm */
+.top-bar {
+  display: flex;
+  justify-content: space-between; /* Căn đều hai bên */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin-bottom: 20px; /* Khoảng cách dưới */
+  padding: 10px 0; /* Khoảng cách phía trên và dưới */
+}
+
+/* CSS cho nút Thêm Sản Phẩm */
+.top-bar .btn {
+  margin-right: 2px; /* Khoảng cách giữa nút Thêm Mới và khung tìm kiếm */
+  background-color: #5eabf8; /* Màu xanh cho nút thêm */
+  color: white;
+  border-radius: 5px;
+  padding: 10px 30px; /* Điều chỉnh padding để nút đồng đều hơn */
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.top-bar .btn:hover {
+  background-color: #d5e40a; /* Đổi màu khi hover */
+}
+
+/* Căn chỉnh thanh tìm kiếm */
+.search-bar-client {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 472px;
+}
+
+.search-bar-client input {
+  width: 800px; /* Độ rộng của thanh tìm kiếm */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px; /* Đồng bộ font-size */
+  outline: none;
+}
+
+.search-bar-client input:focus {
+  border-color: #007bff; /* Đổi màu viền khi focus */
+}
+
+/* Nút tìm kiếm */
+.search-bar-client button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  background-color: #08f840;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px; /* Đồng bộ font-size */
+}
+
+.search-bar-client button:hover {
+  background-color: #b4d61b; /* Đổi màu khi hover */
+}
+
+.search-bar-client i {
+  font-size: 20px;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px); /* Di chuyển nút lên một chút */
+  box-shadow: 0 8px 15px rgba(250, 15, 7, 0.9); /* Thêm bóng cho hiệu ứng nổi */
+}
+
+/* Hiệu ứng trượt vào từ bên trái cho các dòng mới */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Áp dụng hiệu ứng trượt cho các dòng giao dịch mới */
+.new-transaction {
+  animation: slideInLeft 0.6s ease-in-out;
+}
+
+.color-cell {
+  white-space: nowrap; /* Không xuống dòng */
+  overflow: hidden; /* Ẩn phần văn bản vượt quá kích thước */
+  text-overflow: ellipsis; /* Hiển thị dấu chấm lửng nếu văn bản quá dài */
+  max-width: 150px; /* Đặt chiều rộng tối đa cho ô màu sắc */
+  display: inline-block; /* Giúp áp dụng max-width */
+}
+
+/* colors */
+
+.colors {
+  white-space: nowrap; /* Không cho xuống dòng */
+  overflow: hidden; /* Ẩn phần văn bản vượt quá kích thước */
+  text-overflow: ellipsis; /* Hiển thị dấu chấm lửng nếu văn bản quá dài */
+  max-width: 250px; /* Giới hạn chiều rộng của ô, tùy chỉnh theo ý muốn */
+  display: inline-block; /* Giúp áp dụng max-width */
+  vertical-align: top;
+}
+
+.tooltip-container-color {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Nội dung của tooltip */
+.tooltip-content-color {
+  visibility: hidden;
+  width: 300px; /* Chiều rộng của tooltip */
+  background-color: #828282;
+  color: #ffffff; /* Màu chữ */
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 50%; /* Hiển thị ở giữa chiều cao của phần tử */
+  right: 100%; /* Hiển thị bên phải phần tử */
+  margin-left: 80px; /* Khoảng cách giữa tooltip và phần tử */
+  transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+  opacity: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Bóng mờ nhẹ */
+}
+
+/* Mũi tên nhỏ trên tooltip */
+.tooltip-content-color::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* Đặt mũi tên ở giữa chiều cao tooltip */
+  right: -5px; /* Đặt mũi tên ở bên trái tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(0, 0, 0, 0.75) transparent transparent; /* Màu mũi tên */
+}
+
+.tooltip-container-color:hover .tooltip-content-color {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-50%) translateX(-10px); /* Di chuyển tooltip sang phải khi hiển thị */
+}
+
+.row-inactive {
+  background-color: rgba(187, 233, 206, 0.24) !important;
+}
+
+/* CSS cho cột quản lý (bao gồm biểu tượng) */
+td.quan-ly-cell {
+  width: 150px; /* Điều chỉnh độ rộng tùy ý */
+  text-align: center; /* Căn giữa toàn bộ nội dung */
+}
+
+td.quan-ly-cell .btn {
+  padding: 5px; /* Giảm padding của các nút */
+  font-size: 18px; /* Điều chỉnh kích thước biểu tượng nhỏ lại */
+  display: contents; /* Đảm bảo các nút hiển thị theo hàng ngang */
+}
+
+td.quan-ly-cell .btn-group {
+  display: flex; /* Sử dụng flexbox để các biểu tượng xếp theo hàng ngang */
+  justify-content: space-around; /* Căn đều các biểu tượng */
+  align-items: center;
+  margin-top: 27px;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--bs-modal-color);
+  pointer-events: auto;
+  background-color: var(--bs-modal-bg);
+  background-clip: padding-box;
+  border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+  border-radius: var(--bs-modal-border-radius);
+  outline: 0;
+  margin-top: -20px;
+}
+
+.truncate-text {
+
+  max-width: 200px; 
+}

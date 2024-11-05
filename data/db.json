@@ -1,0 +1,99 @@
+{
+  "products": [
+    {
+      "id": "2bf3",
+      "code": "PROD-1234",
+      "name": "tình ta hai ngã",
+      "description": "điện thoại cho người giàu",
+      "quantity": "05",
+      "price": "33990000",
+      "dateOfPurchase": "2024-11-05",
+      "categories": {
+        "id": "3",
+        "name": "dược phẩm"
+      }
+    },
+    {
+      "id": "dd34",
+      "code": "PROD-1234",
+      "name": "thuốc ngủ",
+      "description": "uống xong rồi ngủ\nđây là thực phẩm chức năng, không phải là thuốc, không có thể thay thế thuốc",
+      "quantity": "05",
+      "price": "33990000",
+      "dateOfPurchase": "2024-11-05",
+      "categories": {
+        "id": "3",
+        "name": "dược phẩm"
+      }
+    },
+    {
+      "id": "59ca",
+      "code": "PROD-1234",
+      "name": "tình ta hai ngã",
+      "description": "điện thoại cho người giàu",
+      "quantity": "05",
+      "price": "33990000",
+      "dateOfPurchase": "2024-11-05",
+      "categories": {
+        "id": "2",
+        "name": "thiết bị y tế"
+      }
+    },
+    {
+      "id": "277c",
+      "code": "PROD-1233",
+      "name": "thuốc xổ",
+      "description": "thuốc uống xong xổ",
+      "quantity": "100",
+      "price": "950000",
+      "dateOfPurchase": "2024-11-05",
+      "categories": {
+        "id": "3",
+        "name": "dược phẩm"
+      }
+    },
+    {
+      "id": "e158",
+      "code": "PROD-1222",
+      "name": "thuốc an thần",
+      "description": "đây không phải là thuốc",
+      "quantity": "100",
+      "price": "33990000",
+      "dateOfPurchase": "2024-11-06",
+      "categories": {
+        "id": "3",
+        "name": "dược phẩm"
+      }
+    },
+    {
+      "id": "beca",
+      "code": "PROD-1231",
+      "name": "thuốc uống vào có người yêu",
+      "description": "thuốc tiên",
+      "quantity": "100",
+      "price": "340000000",
+      "dateOfPurchase": "2024-11-05",
+      "categories": {
+        "id": "1",
+        "name": "thực phẩm chức năng"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "thực phẩm chức năng",
+      "description": "điện thoại cho người giàu"
+    },
+    {
+      "id": "2",
+      "name": "thiết bị y tế",
+      "description": "điện thoại cho người giàu"
+    },
+    {
+      "id": "3",
+      "name": "dược phẩm",
+      "description": "điện thoại cho người giàu"
+    }
+  ]
+}
